@@ -1,6 +1,6 @@
 import React from "react";
 
-export default class Survey extends React.Component {
+export default class Surveys extends React.Component {
   constructor() {
     super();
   }

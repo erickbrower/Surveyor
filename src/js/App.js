@@ -1,5 +1,8 @@
 import React from "react";
+
 import Navbar from "./components/Navbar";
+
+import Routes from "./Routes"
 
 export default class App extends React.Component {
   constructor() {
@@ -10,7 +13,7 @@ export default class App extends React.Component {
     return (
       <div>
         <Navbar />
-        {this.props.children}
+        <Routes />
       </div>
     );
   }
