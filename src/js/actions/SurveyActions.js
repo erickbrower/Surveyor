@@ -12,7 +12,7 @@ export function getSurveys() {
 }
 
 export function getSurvey(id) {
-  surveyApi.getSurveys(id, (survey) => {
+  surveyApi.getSurvey(id, (survey) => {
     dispatcher.dispatch({
       actionType: "RECEIVE_SURVEY",
       survey

@@ -1,10 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default class SurveyItem extends React.Component {
   render() {
-    let { name, category } = this.props;
+    let { id, name, category } = this.props;
+    let linkPath = "surveys/" + id;
     return(
-      <li><strong>{name}</strong> - {category}</li>
+      <li><Link to={linkPath}><strong>{name}</strong></Link> - {category}</li>
     );
   }
 }

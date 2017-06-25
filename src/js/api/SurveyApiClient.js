@@ -29,6 +29,14 @@ class SurveyApiClient {
     }, 200);
   }
 
+  getSurvey(id, success, error) {
+    setTimeout(() => {
+      //Fakin' it
+      let survey = _.find(fakeData.surveys, { id });
+      success(fakeData);
+    }, 200);
+  }
+
   createSurvey(survey, success, error) {
     setTimeout(() => {
       survey.id = Date.now;

@@ -3,7 +3,7 @@ import React from "react";
 import SurveyStore from "../stores/SurveyStore";
 import * as SurveyActions from "../actions/SurveyActions";
 
-import SurveyList from "../components/SurveyList";
+import SurveyList from "../components/SurveyList"
 
 export default class Surveys extends React.Component {
   constructor() {
@@ -23,7 +23,7 @@ export default class Surveys extends React.Component {
   }
 
   componentWillUnmount() {
-    SurveyStore.on("change", this.getSurveys);
+    SurveyStore.removeListener("change", this.getSurveys);
   }
 
   getSurveys() {

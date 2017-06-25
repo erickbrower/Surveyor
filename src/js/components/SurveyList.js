@@ -9,7 +9,7 @@ export default class SurveyList extends React.Component {
     let surveys = this.props.surveys.map((survey) => {
       let { id, name, category } = survey;
       return (
-        <SurveyItem key={id} name={name} category={category} />
+        <SurveyItem id={id} key={id} name={name} category={category} />
       );
     });
     return surveys;
